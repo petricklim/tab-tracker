@@ -26,6 +26,9 @@ module.exports = {
   // add your custom rules here
   rules: {
     // don't require .vue extension when importing
+  
+    'semi': ["error", "never"],
+    'linebreak-style': [0, "error", "windows"],
     'import/extensions': ['error', 'always', {
       js: 'never',
       vue: 'never'
