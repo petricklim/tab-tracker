@@ -1,12 +1,7 @@
-import api from '@/services/api'
+import Api from '@/services/api'
 
 export default {
   register(credentials) {
-    return api().post('register', credentials)
+    return Api().post('register', credentials)
   },
 }
-
-// authService.register({
-//   email: 'test@email.com',
-//   password: '123456'
-// })
