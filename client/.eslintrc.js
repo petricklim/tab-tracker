@@ -27,6 +27,7 @@ module.exports = {
   rules: {
     // don't require .vue extension when importing
     //"brace-style": [2, "allman", { "allowSingleLine": true }],
+    "comma-dangle": ["error", "never"],
     'semi': ["error", "never"],
     'linebreak-style': [0, "error", "windows"],
     'import/extensions': ['error', 'always', {
