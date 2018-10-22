@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <router-view/>
+    <v-app>
+      <main-header />
+      <main>
+        <v-container fluid>
+          <router-view/>
+        </v-container>
+      </main>
+    </v-app>
   </div>
 </template>
 
 <script>
+import MainHeader from './components/MainHeader'
+
 export default {
-  name: 'App'
+  name: 'app',
+  components: {
+    MainHeader
+  }
 }
 </script>
 
