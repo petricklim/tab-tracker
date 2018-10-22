@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+import { sync } from 'vuex-router-sync'
 import colors from 'vuetify/es5/util/colors'
 import 'vuetify/dist/vuetify.min.css'
+import store from './store/store'
 import App from './App'
 import router from './router'
 
@@ -14,10 +16,13 @@ Vue.use(Vuetify, {
   }
 })
 
+sync(store, router)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
