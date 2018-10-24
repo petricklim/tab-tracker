@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+import VueYouTubeEmbed from 'vue-youtube-embed'
 import { sync } from 'vuex-router-sync'
 import colors from 'vuetify/es5/util/colors'
 import 'vuetify/dist/vuetify.min.css'
@@ -15,6 +16,8 @@ Vue.use(Vuetify, {
     accent: colors.indigo.base
   }
 })
+
+Vue.use(VueYouTubeEmbed)
 
 sync(store, router)
 

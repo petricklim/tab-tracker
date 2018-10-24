@@ -5,6 +5,7 @@
     </v-toolbar-title>
     <v-toolbar-items>
       <v-btn
+        v-if="$store.state.isUserLoggedIn"
         @click="navigateTo({ name: 'songs' })"
         flat dark>
         Browse

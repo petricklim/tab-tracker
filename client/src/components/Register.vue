@@ -18,7 +18,7 @@
         <br/>
         <div v-html="error"/>
         <br/>
-        <v-btn class="cyan" dark @click="register">Register</v-btn>
+        <v-btn class="blue" dark @click="register">Register</v-btn>
       </panel>
     </v-flex>
   </v-layout>
@@ -46,6 +46,11 @@ export default {
 
         this.$store.dispatch('setToken', response.data.token)
         this.$store.dispatch('setUser', response.data.user)
+
+        this.$router.push({
+          name: 'songs'
+        })
+        
       } catch (error) {
         this.error = error.response.data.error
       }
